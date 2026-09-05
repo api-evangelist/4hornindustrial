@@ -1,0 +1,16 @@
+generated: '2026-09-05'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: 4hornind.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  9 13:23:41 2026 GMT
+  hsts: false
+domains:
+- domain: 4hornind.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

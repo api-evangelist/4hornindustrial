@@ -1,0 +1,58 @@
+generated: '2026-09-05'
+method: probed
+source: https://4hornind.com/
+note: >-
+  Every named /.well-known/ path was probed on both hosts 4-Horn Industrial controls
+  (the registrable domain and www). Every path returned 404 — the WordPress theme 404
+  template for most paths and the nginx default 404 for /.well-known/security.txt.
+  No document was served, so NO WellKnown or SecurityTxt pointer is wired into
+  apis.yml: this file records a verified absence, not a presence. There are no API
+  baseURL hosts, no OpenAPI servers[] hosts and no docs/console host to probe, because
+  4-Horn Industrial publishes no API.
+hosts:
+- host: 4hornind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.4hornind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

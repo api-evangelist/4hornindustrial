@@ -1,17 +1,32 @@
 aid: 4hornindustrial
 name: 4-Horn Industrial
-description: '4-Horn Industrial is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: '4-Horn Industrial is an industrial equipment rental, sales and contractor
+  supply company headquartered in Nederland, Texas, serving the petrochemical, refinery,
+  pipeline and construction markets across the Gulf Coast from branches in Nederland,
+  Pasadena and Hutto, Texas and Sulphur, Louisiana. It rents and sells manlifts, air
+  compressors, forklifts, compaction and welding equipment, light towers, pneumatic
+  tools and general contractor supplies on a 24/7/365 basis. It is an equipment leasing
+  and distribution business rather than a software company: it publishes no developer
+  program, no public API and no machine-readable API contract. Customer account access
+  is delivered through a third-party rental-management portal (Intempo Software) and
+  payments through Jack Henry ProfitStars SmartPay, both operated by vendors rather
+  than by 4-Horn Industrial itself.'
 url: https://raw.githubusercontent.com/api-evangelist/4hornindustrial/refs/heads/main/apis.yml
+image: https://4hornind.com/wp-content/uploads/2020/12/4H_Industrial_marked-small-copy.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Equipment Rental
+- Industrial Equipment
+- Construction
+- Energy
+- Oil and Gas
+- Logistics
+- Texas
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/4hornindustrial-domain-security.yml
 - type: Website
+  url: https://4hornind.com/
+- type: About
+  url: https://4hornind.com/about-us/
+- type: Support
+  url: https://4hornind.com/contact-us/
+- type: News
+  url: https://4hornind.com/4-horn-industrial-expands-footprint-with-sulphur-louisiana-location/
+- type: Careers
+  url: https://4hornind.com/careers/
+- type: CustomerPortal
+  url: https://4hindustrial.intemposoftware.com/customerportal/login.show
+- type: Instagram
+  url: https://www.instagram.com/4hornindustrial/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/fourhornind
+- type: SecondaryMarket
   url: https://equityzen.com/company/4hornindustrial
+- type: LLMsTxt
+  url: llms/4hornindustrial-llms.txt
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    4-Horn Industrial rents and sells industrial equipment out of four Gulf Coast
+    branches; its only web surface is a WordPress/WooCommerce marketing catalog, and
+    both digital services it offers customers are vendor-operated third parties (an
+    Intempo Software rental portal at 4hindustrial.intemposoftware.com and Jack Henry
+    ProfitStars SmartPay for invoices), so there is no 4-Horn API, developer program
+    or machine-readable contract to profile.
+  evidence:
+  - url: https://4hornind.com/openapi.json
+    status: 404
+  - url: https://4hornind.com/.well-known/api-catalog
+    status: 404
+  - url: https://4hornind.com/.well-known/agent-card.json
+    status: 404
+  - url: https://4hindustrial.intemposoftware.com/customerportal/login.show
+    status: 200
+  - url: https://4hornind.com/llms.txt
+    status: 200
+  checked: '2026-09-05'
